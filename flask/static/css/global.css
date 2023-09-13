@@ -240,3 +240,9 @@ button:hover {
     margin: 40px auto;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .text-field {
+    max-width: 280px;
+  }
+}
