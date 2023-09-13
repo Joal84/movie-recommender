@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-# from sklearn.decomposition import NMF
 from joblib import load
 from fuzzywuzzy import process
 from tmdbv3api import TMDb
@@ -15,11 +14,11 @@ tmdb.debug = True
 
 # DF Merging
 movies_df = pd.read_csv(
-    "./data/movies.csv", index_col=0)
+    "../data/movies.csv", index_col=0)
 links = pd.read_csv(
-    "./data/links.csv", index_col=0)
+    "../data/links.csv", index_col=0)
 ratings = pd.read_csv(
-    "./data/ratings.csv", index_col=1)
+    "../data/ratings.csv", index_col=1)
 
 merged_df = pd.merge(movies_df, ratings, left_index=True, right_index=True)
 merged_df = pd.merge(merged_df, links, left_index=True, right_index=True)
@@ -34,10 +33,7 @@ wide_df = pd.pivot_table(merged_df, values="rating",
 wide_df.dropna(axis=1, thresh=20, inplace=True)
 wide_df.fillna(wide_df.mean(), inplace=True)
 
-model = load("./flask/static/model/model")
-
-# model = NMF(n_components=80,  max_iter=3000, init="random", tol=0.0002)
-# model.fit(wide_df)
+model = load("./static/model/model")
 
 Q = model.components_
 movies_name_list = wide_df.columns
