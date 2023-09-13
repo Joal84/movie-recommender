@@ -4,6 +4,7 @@ from joblib import load
 from fuzzywuzzy import process
 from tmdbv3api import TMDb
 from tmdbv3api import Movie
+from sklearn.decomposition import NMF
 
 
 # API Auth
