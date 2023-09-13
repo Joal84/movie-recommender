@@ -5,4 +5,4 @@ joblib
 numpy
 pandas
 tmdbv3api
-scikit-learn
+scikit-learn==1.2.1

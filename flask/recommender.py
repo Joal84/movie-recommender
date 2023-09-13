@@ -5,7 +5,7 @@ from fuzzywuzzy import process
 from tmdbv3api import TMDb
 from tmdbv3api import Movie
 from sklearn.decomposition import NMF
-
+import sklearn
 
 # API Auth
 tmdb = TMDb()
@@ -38,7 +38,7 @@ model = load("./static/model/model")
 
 Q = model.components_
 movies_name_list = wide_df.columns
-
+print(Q)
 
 def get_recommendation(user_rating):
 
@@ -72,7 +72,6 @@ def get_recommendation(user_rating):
     recommendations.columns = ["predicted_rating"]
 
     return recommendations.sort_values(by="predicted_rating", ascending=False)[:8]
-
 
 def get_movie_data(recommendation_list):
     database = Movie()
