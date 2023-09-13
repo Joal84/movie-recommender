@@ -5,5 +5,5 @@ pandas
 tmdbv3api
 gunicorn
 Flask
-scikit-image @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_c5gfw0_uou/croot/scikit-image_1669241745874/work
-scikit-learn @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a65wfgtmmc/croot/scikit-learn_1676911655056/work
+scikit-image
+scikit-learn==1.0.2
