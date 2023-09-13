@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/global.css" />
+    <title>Movie Recommendation powered by NMF</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <div class="title-container">
+          
+      <h2 class="sub-title">AI Powered</h2>
+      <a href="/" class="title">MOVIE RECOMMENDER</a>
+        </div>
+      <img class="logo" src="{{url_for('static', filename='logo.png')}}" alt="logo" />
+      </div>
+      <div class="sub-title-reco">
+        Acording to your taste, those are the movies you should watch:
+      </div>
+      <div class="movie-container">
+      {% for m, info in data %}
+      <div class="movie">
+        <div class="movie-name">{{info[0]}}</div>
+      <img class="movie-poster"src="https://image.tmdb.org/t/p/w500/{{info[2]}}" alt="{{info[0]}} poster / artwork" />
+      <div class="movie-info">>{{info[1]}}</div>
+      </div>
+      {% endfor %}
+      </div>
+      
+        <div class="go-back">
+          <a href="/">Go Back</a>
+        </div>
+      
+  </body>
+</html>

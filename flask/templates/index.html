@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/global.css" />
+    <title>Movie Recommendation powered by NMF</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <div class="title-container">
+      <h2 class="sub-title">AI Powered</h2>
+      <h1 class="title">MOVIE RECOMMENDER</h1>
+        </div>
+      <img class="logo" src="{{url_for('static', filename='logo.png')}}" alt="logo" />
+      </div>
+      <div class="rate-container">
+        <div class="instruction">TELL US WHAT YOU LIKE</div>
+        <div class="instruction-bold">WRITE THE NAME OF 5 MOVIES AND RATE THEM</div>
+        <div class="main-container">
+          <div>
+        <form method="POST" action="/recommendation">
+            <label class="movie-label" for="movie1">Movie 1</label>
+            <input class="text-field" type="text" id="movie1" name="movie1" required />
+            
+            <rating>
+              <input
+                type="radio"
+                name="rating1"
+                value="1"
+                aria-label="1 star"
+                required
+              /><input
+                type="radio"
+                name="rating1"
+                value="2"
+                aria-label="2 stars"
+              /><input
+                type="radio"
+                name="rating1"
+                value="3"
+                aria-label="3 stars"
+              /><input
+                type="radio"
+                name="rating1"
+                value="4"
+                aria-label="4 stars"
+              /><input
+                type="radio"
+                name="rating1"
+                value="5"
+                aria-label="5 stars"
+              />
+            </rating>
+          </div>
+          <div>
+            <label class="movie-label" for="movie2">Movie 2</label>
+            <input class="text-field" type="text" id="movie2" name="movie2" required />
+            
+            <rating>
+              <input
+                type="radio"
+                name="rating2"
+                value="1"
+                aria-label="1 star"
+                required
+              /><input
+                type="radio"
+                name="rating2"
+                value="2"
+                aria-label="2 stars"
+              /><input
+                type="radio"
+                name="rating2"
+                value="3"
+                aria-label="3 stars"
+              /><input
+                type="radio"
+                name="rating2"
+                value="4"
+                aria-label="4 stars"
+              /><input
+                type="radio"
+                name="rating2"
+                value="5"
+                aria-label="5 stars"
+              />
+            </rating>
+          </div>
+          <div>
+            <label class="movie-label" for="movie3">Movie 3</label>
+            <input class="text-field" type="text" id="movie3" name="movie3" required />
+            
+            <rating>
+              <input
+                type="radio"
+                name="rating3"
+                value="1"
+                aria-label="1 star"
+                required
+              /><input
+                type="radio"
+                name="rating3"
+                value="2"
+                aria-label="2 stars"
+              /><input
+                type="radio"
+                name="rating3"
+                value="3"
+                aria-label="3 stars"
+              /><input
+                type="radio"
+                name="rating3"
+                value="4"
+                aria-label="4 stars"
+              /><input
+                type="radio"
+                name="rating3"
+                value="5"
+                aria-label="5 stars"
+              />
+            </rating>
+          </div>
+          <div>
+            <label class="movie-label" for="movie4">Movie 4</label>
+            <input class="text-field" type="text" id="movie4" name="movie4" required />
+            
+            <rating>
+              <input
+                type="radio"
+                name="rating4"
+                value="1"
+                aria-label="1 star"
+                required
+              /><input
+                type="radio"
+                name="rating4"
+                value="2"
+                aria-label="2 stars"
+              /><input
+                type="radio"
+                name="rating4"
+                value="3"
+                aria-label="3 stars"
+              /><input
+                type="radio"
+                name="rating4"
+                value="4"
+                aria-label="4 stars"
+              /><input
+                type="radio"
+                name="rating4"
+                value="5"
+                aria-label="5 stars"
+              />
+            </rating>
+          <div>
+            <label class="movie-label" for="movie5">Movie 5</label>
+            <input class="text-field" type="text" id="movie5" name="movie5" required />
+            
+            <rating>
+              <input
+                type="radio"
+                name="rating5"
+                value="1"
+                aria-label="1 star"
+                required
+              /><input
+                type="radio"
+                name="rating5"
+                value="2"
+                aria-label="2 stars"
+              /><input
+                type="radio"
+                name="rating5"
+                value="3"
+                aria-label="3 stars"
+              /><input
+                type="radio"
+                name="rating5"
+                value="4"
+                aria-label="4 stars"
+              /><input
+                type="radio"
+                name="rating5"
+                value="5"
+                aria-label="5 stars"
+              />
+            </rating>
+          </div>
+          <div class="button-container">
+          <button type="submit" value="Submit" >Submit</button>
+        </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </body>
+
+</html>

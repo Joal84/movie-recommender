@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.container {
+  max-width: 90%;
+  margin: 30px auto;
+}
+input[type="radio"] {
+  -webkit-appearance: none;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* generated content is now supported on input. supporting older browsers? change button above to {position: absolute; opacity: 0;} and add a label, then style that, and change all selectors to reflect that change */
+input[type="radio"]::after {
+  content: "\2605";
+  font-size: 32px;
+}
+
+/* by default, if no value is selected, all stars are grey */
+input[type="radio"]:invalid::after {
+  color: #ddd;
+}
+
+/* if the rating has focus or is hovered, make all stars darker */
+rating:hover input[type="radio"]:invalid::after,
+rating:focus-within input[type="radio"]:invalid::after {
+  color: #888;
+}
+
+/* make all the stars after the focused one back to ligh grey, until a value is selected */
+rating:hover input[type="radio"]:hover ~ input[type="radio"]:invalid::after,
+rating input[type="radio"]:focus ~ input[type="radio"]:invalid::after {
+  color: #ddd;
+}
+
+/* if a value is selected, make them all selected */
+rating input[type="radio"]:valid {
+  color: orange;
+}
+/* then make the ones coming after the selected value look inactive */
+rating input[type="radio"]:checked ~ input[type="radio"]:not(:checked)::after {
+  color: #ccc;
+  content: "\2606"; /* optional. hollow star */
+}
+.title {
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 9.5px;
+}
+.title,
+a:link,
+a:visited {
+  color: #050505;
+  text-decoration: none;
+}
+.title,
+a:active,
+a:hover {
+  color: #282828;
+}
+.sub-title {
+  font-family: 28px;
+  color: #929292;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 12px;
+  margin-left: 5px;
+}
+body {
+  background-color: #f0f0f0;
+}
+.rate-container {
+  max-width: 720px;
+  margin: 80px auto;
+}
+
+.instruction {
+  font-weight: 300;
+  color: #ababab;
+}
+
+.instruction-bold {
+  margin-bottom: 20px;
+}
+.main-container {
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 20px 0.8px #aaaaaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-field {
+  height: 42px;
+  width: 350px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(218, 218, 218);
+  border-width: thin;
+  margin-right: 20px;
+
+  padding: 10px;
+}
+.movie-label {
+  text-transform: uppercase;
+  color: #929292;
+  margin-right: 20px;
+}
+.rate-label {
+  text-transform: uppercase;
+  color: #929292;
+}
+button {
+  cursor: pointer;
+  border-radius: 500px;
+  background-color: #000;
+  width: 120px;
+  height: 35px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+button:hover {
+  background-color: #fff;
+
+  color: #000;
+}
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.logo {
+  width: 100px;
+  filter: grayscale();
+}
+.movie-container {
+  width: fit-content;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 60px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  justify-content: center;
+  margin: 20px auto;
+  box-shadow: 0px 0px 20px 0.8px #aaaaaa;
+}
+.movie-poster {
+  max-width: 318px;
+  border: solid 1px;
+  margin-bottom: 20px;
+}
+
+.movie-name {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  max-width: 310px;
+}
+.movie-info {
+  font-size: 16px;
+  font-weight: 300;
+  color: #929292;
+  margin-bottom: 20px;
+  max-width: 310px;
+}
+.sub-title-reco {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #696969;
+  font-size: 18px;
+  margin-left: 135px;
+  margin-top: 50px;
+}
+.movie {
+  transition: all 0.5s;
+}
+.movie:hover {
+  transform: scale(105%);
+}
+.go-back {
+  width: 100px;
+  margin: 0 auto;
+}
