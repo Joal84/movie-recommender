@@ -1,8 +1,8 @@
 gunicorn
 flask
-fuzzywuzzy==0.18.0
-joblib==1.1.1
-numpy==1.23.5
-pandas==2.0.2
-tmdbv3api==1.7.7
+fuzzywuzzy
+joblib
+numpy
+pandas
+tmdbv3api
 scikit-learn
