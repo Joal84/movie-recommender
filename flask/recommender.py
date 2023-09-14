@@ -5,7 +5,6 @@ from fuzzywuzzy import process
 from tmdbv3api import TMDb
 from tmdbv3api import Movie
 from sklearn.decomposition import NMF
-import sklearn
 
 # API Auth
 tmdb = TMDb()
