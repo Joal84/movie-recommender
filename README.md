@@ -1,4 +1,4 @@
-# Movie Recommendation Website
+# MOVIE RECOMMENDER
 
 A movie recommendation website powered by an unsupervised learning non-negative matrix factorization algorithm. This project provides users with personalized movie recommendations based on their viewing history and preferences.
 
